@@ -28,5 +28,6 @@ class Quote < ApplicationRecord
   #* these three callbacks are equivalent to this single line of code
   #* this means that we want to broadcast quote creations, updates, and deletions to the "quotes" stream asynchronously.
   
-  broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
+  broadcasts_to ->(quote) { [quote.company, "quotes"] }, inserts_by: :prepend
+  belongs_to :company
 end

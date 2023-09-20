@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "quotes#index"
+  root to: "pages#home"
+  devise_for :users
   resources :quotes
 end
 

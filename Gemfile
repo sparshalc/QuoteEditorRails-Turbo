@@ -77,3 +77,5 @@ end
 gem "foreman", "~> 0.87.2"
 
 gem "simple_form", "~> 5.2"
+
+gem "devise", "~> 4.9"
